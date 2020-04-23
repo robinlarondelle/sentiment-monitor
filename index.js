@@ -3,7 +3,6 @@ const twitter = require('twitter')
 const { filter } = require('rxjs')
 const fs  = require('fs')
 
-
 const client = new twitter({
   consumer_key: process.env.API_KEY,
   consumer_secret: process.env.API_SECRET_KEY,
@@ -16,34 +15,23 @@ const params ={
   lang: 'en', 
   include_entities: false,
   count: 100,
-  until: '2020-04-18'}
+  until: '2020-04-18'
+}
 
 client.get('search/tweets', params)
   .then(tweets => {
-    
-    console.dir(tweets.statuses, {depth: null});
-    writeFile(tweets.statuses.map(x => getTweetText(x)), 'normal_tweets')
-
-    const filteredTweets = filterTweets(tweets.statuses)
-    const filteredTweetsText = filteredTweets.map(x => getTweetText(x))
+    const filteredTweetsText = filterTweets(tweets.statuses).map(x => x.text)
     writeFile(filteredTweetsText, 'filtered_tweets')
-    
-  })
-  .catch(error => {
-    console.log(error);      
-    
-  })
+  }).catch(error => console.log(error))
 
-function filterTweets(tweetsList) {
+function filterTweets(tweetsList) 
   return tweetsList.filter(x => !(/^RT @.*/.test(x.text)))
-}
 
 function checkForFile(filename, callback) {
   fs.exists(filename, exists => {
     if (exists) callback()
     else {
-      fs.writeFile(filename, {flag: 'wx'}, function (err, data) 
-      { 
+      fs.writeFile(filename, {flag: 'wx'}, (err, data) => { 
           callback();
       })
     }
@@ -58,8 +46,4 @@ function writeFile(json, path) {
       if (err) console.log(err); return;
     })
   })
-}
-
-function getTweetText(tweet) {
-  return tweet.text
 }
