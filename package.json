@@ -1,0 +1,19 @@
+{
+  "name": "sentiment-monitor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robinlarondelle/sentiment-monitor.git"
+  },
+  "author": "Robin La Rondelle & Wouter Kodde",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robinlarondelle/sentiment-monitor/issues"
+  },
+  "homepage": "https://github.com/robinlarondelle/sentiment-monitor#readme"
+}
