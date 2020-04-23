@@ -54,7 +54,7 @@ function writeFile(json, path) {
   const filename = `./file/${path}.json`
 
   checkForFile(filename, () => {
-    fs.writeFileSync(filename, JSON.stringify(json),{ flag: 'wx' }, err => {
+    fs.writeFileSync(filename, JSON.stringify(json, null, 2),'utf-8', { flag: 'wx' }, err => {
       if (err) console.log(err); return;
     })
   })
