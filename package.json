@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/robinlarondelle/sentiment-monitor/issues"
   },
-  "homepage": "https://github.com/robinlarondelle/sentiment-monitor#readme"
+  "homepage": "https://github.com/robinlarondelle/sentiment-monitor#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.3"
+  }
 }
