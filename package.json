@@ -20,6 +20,7 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "nodemon": "^2.0.3",
+    "rxjs": "^6.5.5",
     "twitter": "^1.7.1"
   }
 }

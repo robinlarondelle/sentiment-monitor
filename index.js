@@ -1,12 +1,9 @@
 require("dotenv").config({ path: "./environment/development.env" })
-
-console.log(process.env.API_KEY);
-console.log(process.env.API_KEY_SECRET);
-console.log(process.env.ACCESS_TOKEN);
-console.log(process.env.ACCESS_TOKEN_SECRET);
-
-
 const twitter = require('twitter')
+const { filter } = require('rxjs')
+const fs  = require('fs')
+
+
 const client = new twitter({
   consumer_key: process.env.API_KEY,
   consumer_secret: process.env.API_SECRET_KEY,
@@ -14,14 +11,51 @@ const client = new twitter({
   access_token_secret: process.env.ACCESS_TOKEN_SECRET
 })
 
-const params ={screen_name: 'feyenoord'}
+const params ={
+  q: 'coca cola', 
+  lang: 'en', 
+  result_type: 'recent', 
+  include_entities: false,
+  count: 10,
+  until: '2020-04-18'}
 
-client.get('statuses/user_timeline', params, (err, tweets, response) => {
-  if (!err) {
-    console.log(tweets);
+client.get('search/tweets', params)
+  .then(tweets => {
     
-  } else {
-    console.log(err);
+    console.dir(tweets.statuses, {depth: null});
+    writeFile(tweets.statuses, 'normal_tweets')
+
+    const filteredTweets = filterTweets(tweets.statuses)
+    writeFile(filteredTweets, 'filtered_tweets')
     
-  }
-})
+  })
+  .catch(error => {
+    console.log(error);      
+    
+  })
+
+function filterTweets(tweetsList) {
+  return tweetsList.filter(x => /^RT @.*/.test(x.text))
+}
+
+function checkForFile(filename, callback) {
+  fs.exists(filename, exists => {
+    if (exists) callback()
+    else {
+      fs.writeFile(filename, {flag: 'wx'}, function (err, data) 
+      { 
+          callback();
+      })
+    }
+  })
+}
+
+function writeFile(json, path) {
+  const filename = `./file/${path}.json`
+
+  checkForFile(filename, () => {
+    fs.writeFileSync(filename, JSON.stringify(json),{ flag: 'wx' }, err => {
+      if (err) console.log(err); return;
+    })
+  })
+}
