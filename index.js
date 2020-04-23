@@ -14,7 +14,6 @@ const client = new twitter({
 const params ={
   q: 'coca cola', 
   lang: 'en', 
-  result_type: 'recent', 
   include_entities: false,
   count: 100,
   until: '2020-04-18'}
@@ -26,7 +25,7 @@ client.get('search/tweets', params)
     writeFile(tweets.statuses.map(x => getTweetText(x)), 'normal_tweets')
 
     const filteredTweets = filterTweets(tweets.statuses)
-    const filteredTweetsText = filterTweets.map(x => getTweetText(x))
+    const filteredTweetsText = filteredTweets.map(x => getTweetText(x))
     writeFile(filteredTweetsText, 'filtered_tweets')
     
   })
