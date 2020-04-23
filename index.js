@@ -16,17 +16,18 @@ const params ={
   lang: 'en', 
   result_type: 'recent', 
   include_entities: false,
-  count: 10,
+  count: 100,
   until: '2020-04-18'}
 
 client.get('search/tweets', params)
   .then(tweets => {
     
     console.dir(tweets.statuses, {depth: null});
-    writeFile(tweets.statuses, 'normal_tweets')
+    writeFile(tweets.statuses.map(x => getTweetText(x)), 'normal_tweets')
 
     const filteredTweets = filterTweets(tweets.statuses)
-    writeFile(filteredTweets, 'filtered_tweets')
+    const filteredTweetsText = filterTweets.map(x => getTweetText(x))
+    writeFile(filteredTweetsText, 'filtered_tweets')
     
   })
   .catch(error => {
@@ -35,7 +36,7 @@ client.get('search/tweets', params)
   })
 
 function filterTweets(tweetsList) {
-  return tweetsList.filter(x => !(/^RT @.*/.test(x.text))).map(x => x.text)
+  return tweetsList.filter(x => !(/^RT @.*/.test(x.text)))
 }
 
 function checkForFile(filename, callback) {
@@ -58,4 +59,8 @@ function writeFile(json, path) {
       if (err) console.log(err); return;
     })
   })
+}
+
+function getTweetText(tweet) {
+  return tweet.text
 }
