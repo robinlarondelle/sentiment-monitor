@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,6 @@
   "homepage": "https://github.com/robinlarondelle/sentiment-monitor#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "nodemon": "^2.0.3",
     "rxjs": "^6.5.5",
     "twitter": "^1.7.1"
   }

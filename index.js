@@ -35,7 +35,7 @@ client.get('search/tweets', params)
   })
 
 function filterTweets(tweetsList) {
-  return tweetsList.filter(x => /^RT @.*/.test(x.text))
+  return tweetsList.filter(x => !(/^RT @.*/.test(x.text))).map(x => x.text)
 }
 
 function checkForFile(filename, callback) {
