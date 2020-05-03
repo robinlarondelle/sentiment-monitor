@@ -19,6 +19,8 @@
   "homepage": "https://github.com/robinlarondelle/sentiment-monitor#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
+    "moment": "^2.25.1",
+    "natural": "^2.1.1",
     "rxjs": "^6.5.5",
     "twitter": "^1.7.1"
   }
