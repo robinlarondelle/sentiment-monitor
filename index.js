@@ -2,8 +2,9 @@ require("dotenv").config({ path: "./environment/development.env" })
 const twitter = require('twitter')
 const moment = require("moment")
 const { filter, zip } = require('rxjs')
-const {map} = require('rxjs/operators')
+const { map } = require('rxjs/operators')
 const natural = require("natural")
+const util = require('util')
 const tokenizer = new natural.WordTokenizer();
 const fs = require('fs')
 natural.PorterStemmer.attach();
@@ -23,79 +24,50 @@ const params = {
   include_entities: false,
   count: 100,
   until,
-  tweet_mode: 'extended'
+  tweet_mode: 'extended',
+  result_type: 'recent'
 }
 
-function getTweets(tweetsList) {
+tweets.then(tweets => polishTweets(tweets))
+  .then(polishedTweets => getTweetSentiment(polishedTweets))
+  .then(sentimentTweets => writeFile(sentimentTweets, 'sentimentTweets'))
+  .catch(err => console.log(err))
 
-  return new Promise((resolve) => {
+getTweets.then(tweets => {
+  const min_id = tweets.statuses[0].id
+  const max_id = tweets.statuses[tweets.statuses.length-1].id
+  const tweets = tweets.statuses.tweets.statusesmap(x => x.text)
 
-    client.get('search/tweets', params)
-    .then(tweets => {
-
-      removeRetweets(tweets.statuses.map(x => x.full_text)).then((nonRetweets) => {
-
-        if(tweetsList == undefined) {
-          tweetsList = nonRetweets;
-        } else {
-          nonRetweets.concat(tweetsList);
-          console.log(nonRetweets);
-          tweetsList = nonRetweets;
-        }
-
-        resolve(tweetsList);
-
-      });
-  
-    }).catch(err => console.log(err))
-
-
+  removeRetweets(tweets).then(removedRetweets => {
+    if (removedRetweets.length >= 100) {
+      //continute
+    } else {
+      // get more tweets
+    }
   })
-  .then((tweets) => {
-
-    console.log(tweets.length);
-
-    if (tweets.length >= 100) return tweets.map();
-
-    return getTweets(tweets);
-
-  });
-
-}
-
-getTweets()
-.then(tweets => {
-  console.log(tweets.length);
-    polishTweets(tweets).then(polishedTweets => {
-      writeFile(polishedTweets, 'filtered_tweets')
-    }).catch(err => console.log(err))
 })
 
-// client.get('search/tweets', params)
-//   .then(tweets => {
-//     polishTweets(tweets.statuses.map(x => x.full_text)).then(polishedTweets => {
-//       writeFile(polishedTweets, 'filtered_tweets')
-//     }).catch(err => console.log(err))
-//   }).catch(err => console.log(err))
+function getTweets(params) {
+  return new Promise((resolve, reject) => {
+    client.get('search/tweets', params).then(tweets => {
+      // params.max_id = tweets.statuses[tweets.statuses.length-1].id
+      resolve(tweets)
+    }).catch(err => console.log(err))
+  })
+}
 
 function polishTweets(tweetsList) {
   return new Promise((resolve, reject) => {
-    removeRetweets(tweetsList).then(filteredRetweets => {
-      const lowercaseTweets = filteredRetweets.map(x => x.toLowerCase())
-      removeURLs(lowercaseTweets).then(filteredURLs => {
-        removeMentions(filteredURLs).then(filteredMentions => {
-          removeEmojis(filteredMentions).then(filteredEmojis => {
-            tokenizeTweets(filteredEmojis).then(tokenizedTweets => {
-              getTweetSentiment(tokenizedTweets).then(sentiments => {
-                resolve(sentiments)
-              }).catch(err => console.log(err))
-            }).catch(err => console.log(err))
-          }).catch(err => console.log(err))
-        }).catch(err => console.log(err))
-      }).catch(err => console.log(err))
-    }).catch(err => console.log(err))
+    removeURLs(tweetsList)
+      .then(filteredURLs => removeMentions(filteredURLs))
+      .then(filteredMentions => removeEmojis(filteredMentions))
+      .then(filteredEmojis => resolve(filteredEmojis))
+      .catch(err => console.log(err))
   })
 }
+
+//tokenize 
+//get sentiment
 
 function removeRetweets(tweetsList) {
   return new Promise((resolve, reject) => {
