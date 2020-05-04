@@ -86,7 +86,7 @@ function getTweetSentiment(tokenizedTweets) {
   return new Promise((resolve, reject) => {
     const sentiments = tokenizedTweets.map(x => analyzer.getSentiment(x))
     resolve(sentiments.map((sentiment, index) => {
-      return [sentiment, tokenizedTweets[index]];
+      return [sentiment, tokenizedTweets[index].join(' ')];
     }))
   })
 }
