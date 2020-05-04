@@ -1,11 +1,15 @@
 require("dotenv").config({ path: "./environment/development.env" })
 const twitter = require('twitter')
 const moment = require("moment")
-const { filter } = require('rxjs')
+const { filter, zip } = require('rxjs')
+const {map} = require('rxjs/operators')
 const natural = require("natural")
 const tokenizer = new natural.WordTokenizer();
 const fs = require('fs')
 natural.PorterStemmer.attach();
+const Analyzer = natural.SentimentAnalyzer;
+const stemmer = natural.PorterStemmer;
+const analyzer = new Analyzer("English", stemmer, "afinn");
 const client = new twitter({
   consumer_key: process.env.API_KEY,
   consumer_secret: process.env.API_SECRET_KEY,
@@ -13,9 +17,9 @@ const client = new twitter({
   access_token_secret: process.env.ACCESS_TOKEN_SECRET
 })
 const until = moment().subtract(6, "days").format("yyyy-MM-DD")
-const params ={
-  q: 'trump', 
-  lang: 'en', 
+const params = {
+  q: 'trump',
+  lang: 'en',
   include_entities: false,
   count: 100,
   until,
@@ -24,20 +28,53 @@ const params ={
 
 client.get('search/tweets', params)
   .then(tweets => {
-    filterTweets(tweets.statuses.map(x => x.full_text)).then(filteredTweets => {
-      tokenizeTweets(filteredTweets).then(tokenizedTweets => {
-        writeFile(filteredTweets, 'filtered_tweets')
-      }).catch(error => console.log(error))
-    }).catch(error => console.log(error))
+    polishTweets(tweets.statuses.map(x => x.full_text)).then(polishedTweets => {
+      writeFile(polishedTweets, 'filtered_tweets')
+    }).catch(err => console.log(err))
   }).catch(err => console.log(err))
 
+function polishTweets(tweetsList) {
+  return new Promise((resolve, reject) => {
+    removeRetweets(tweetsList).then(filteredRetweets => {
+      const lowercaseTweets = filteredRetweets.map(x => x.toLowerCase())
+      removeURLs(lowercaseTweets).then(filteredURLs => {
+        removeMentions(filteredURLs).then(filteredMentions => {
+          removeEmojis(filteredMentions).then(filteredEmojis => {
+            tokenizeTweets(filteredEmojis).then(tokenizedTweets => {
+              getTweetSentiment(tokenizedTweets).then(sentiments => {
+                resolve(sentiments)
+              }).catch(err => console.log(err))
+            }).catch(err => console.log(err))
+          }).catch(err => console.log(err))
+        }).catch(err => console.log(err))
+      }).catch(err => console.log(err))
+    }).catch(err => console.log(err))
+  })
+}
 
-function filterTweets(tweetsList) {
+function removeRetweets(tweetsList) {
   return new Promise((resolve, reject) => {
     resolve(tweetsList.filter(x => !(/^RT @.*/.test(x))))
   })
 }
 
+function removeURLs(tweets) {
+  return new Promise((resolve, reject) => {
+    resolve(tweets.map(x => x.replace(/(?:https?|ftp):\/\/[\n\S]+/g, '').trim()))
+  })
+}
+
+function removeMentions(tweets) {
+  return new Promise((resolve, reject) => {
+    resolve(tweets.map(x => x.replace(/\B([@][\w_-]+)/g, '').trim()))
+  })
+}
+
+function removeEmojis(tweets) {
+  return new Promise((resolve, reject) => {
+    resolve(tweets.map(x => x.replace(/([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g, '').trim()))
+  })
+}
 
 function tokenizeTweets(tweets) {
   return new Promise((resolve, reject) => {
@@ -45,21 +82,14 @@ function tokenizeTweets(tweets) {
   })
 }
 
-function stemTweets(tweets) {
+function getTweetSentiment(tokenizedTweets) {
   return new Promise((resolve, reject) => {
-    resolve(tweets.map(x => x.tokenizeAndStem()))
-  })
-}
-
-function checkForFile(filename, callback) {
-  fs.exists(filename, exists => {
-    if (exists) callback()
-    else {
-      fs.writeFile(filename, {flag: 'wx'}, function (err, data) 
-      { 
-          callback();
-      })
-    }
+    const sentiments = tokenizedTweets.map(x => analyzer.getSentiment(x))
+    const zippedSentiments = zip(tokenizedTweets, sentiments).pipe(
+      map((tweet, sentiment) => ({tweet, sentiment}))
+    ).subscribe(value => {
+      resolve(value)
+    })
   })
 }
 
@@ -67,8 +97,19 @@ function writeFile(json, path) {
   const filename = `./file/${path}.json`
 
   checkForFile(filename, () => {
-    fs.writeFileSync(filename, JSON.stringify(json, null, 2),'utf-8', { flag: 'wx' }, err => {
+    fs.writeFileSync(filename, JSON.stringify(json, null, 2), 'utf-8', { flag: 'wx' }, err => {
       if (err) console.log(err); return;
     })
+  })
+}
+
+function checkForFile(filename, callback) {
+  fs.exists(filename, exists => {
+    if (exists) callback()
+    else {
+      fs.writeFile(filename, { flag: 'wx' }, function (err, data) {
+        callback();
+      })
+    }
   })
 }
