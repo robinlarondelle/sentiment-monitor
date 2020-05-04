@@ -26,25 +26,57 @@ const params = {
   tweet_mode: 'extended'
 }
 
-getTweets().then(tweets => {
-  polishTweets(tweets).then(polishedTweets => {
-    writeFile(polishedTweets, 'filtered_tweets')
-  }).catch(err => console.log(err))
-}).catch(err => console.log(err))
+function getTweets(tweetsList) {
 
-function getTweets(tweetsList = []) {
-  return new Promise((resolve, reject) => {
-    client.get('search/tweets', params).then(fetchedTweets => {
-      removeRetweets(fetchedTweets.statuses.map(x => x.full_text)).then(removedRetweets => {
+  return new Promise((resolve) => {
+
+    client.get('search/tweets', params)
+    .then(tweets => {
+
+      removeRetweets(tweets.statuses.map(x => x.full_text)).then((nonRetweets) => {
+
+        if(tweetsList == undefined) {
+          tweetsList = nonRetweets;
+        } else {
+          nonRetweets.concat(tweetsList);
+          console.log(nonRetweets);
+          tweetsList = nonRetweets;
+        }
+
+        resolve(tweetsList);
+
+      });
   
-        const tweets = removedRetweets + tweetsList
-        if (tweets.length >= 250) resolve(tweets)
-        
-        getTweets(tweets)
-      })
-    })
+    }).catch(err => console.log(err))
+
+
   })
+  .then((tweets) => {
+
+    console.log(tweets.length);
+
+    if (tweets.length >= 100) return tweets.map();
+
+    return getTweets(tweets);
+
+  });
+
 }
+
+getTweets()
+.then(tweets => {
+  console.log(tweets.length);
+    polishTweets(tweets).then(polishedTweets => {
+      writeFile(polishedTweets, 'filtered_tweets')
+    }).catch(err => console.log(err))
+})
+
+// client.get('search/tweets', params)
+//   .then(tweets => {
+//     polishTweets(tweets.statuses.map(x => x.full_text)).then(polishedTweets => {
+//       writeFile(polishedTweets, 'filtered_tweets')
+//     }).catch(err => console.log(err))
+//   }).catch(err => console.log(err))
 
 function polishTweets(tweetsList) {
   return new Promise((resolve, reject) => {
