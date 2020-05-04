@@ -26,12 +26,25 @@ const params = {
   tweet_mode: 'extended'
 }
 
-client.get('search/tweets', params)
-  .then(tweets => {
-    polishTweets(tweets.statuses.map(x => x.full_text)).then(polishedTweets => {
-      writeFile(polishedTweets, 'filtered_tweets')
-    }).catch(err => console.log(err))
+getTweets().then(tweets => {
+  polishTweets(tweets).then(polishedTweets => {
+    writeFile(polishedTweets, 'filtered_tweets')
   }).catch(err => console.log(err))
+}).catch(err => console.log(err))
+
+function getTweets(tweetsList = []) {
+  return new Promise((resolve, reject) => {
+    client.get('search/tweets', params).then(fetchedTweets => {
+      removeRetweets(fetchedTweets.statuses.map(x => x.full_text)).then(removedRetweets => {
+  
+        const tweets = removedRetweets + tweetsList
+        if (tweets.length >= 250) resolve(tweets)
+        
+        getTweets(tweets)
+      })
+    })
+  })
+}
 
 function polishTweets(tweetsList) {
   return new Promise((resolve, reject) => {
