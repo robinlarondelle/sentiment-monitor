@@ -18,14 +18,15 @@ const params ={
   lang: 'en', 
   include_entities: false,
   count: 100,
-  until
+  until,
+  tweet_mode: 'extended'
 }
 
 client.get('search/tweets', params)
   .then(tweets => {
-    filterTweets(tweets.statuses.map(x => x.text)).then(filteredTweets => {
+    filterTweets(tweets.statuses.map(x => x.full_text)).then(filteredTweets => {
       tokenizeTweets(filteredTweets).then(tokenizedTweets => {
-        writeFile(tokenizedTweets, 'filtered_tweets')
+        writeFile(filteredTweets, 'filtered_tweets')
       }).catch(error => console.log(error))
     }).catch(error => console.log(error))
   }).catch(err => console.log(err))
