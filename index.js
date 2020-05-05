@@ -5,12 +5,12 @@ const { filter, zip } = require('rxjs')
 const { map } = require('rxjs/operators')
 const natural = require("natural")
 const util = require('util')
-const tokenizer = new natural.WordTokenizer();
+const tokenizer = new natural.WordTokenizer()
 const fs = require('fs')
-natural.PorterStemmer.attach();
-const Analyzer = natural.SentimentAnalyzer;
-const stemmer = natural.PorterStemmer;
-const analyzer = new Analyzer("English", stemmer, "afinn");
+natural.PorterStemmer.attach()
+const Analyzer = natural.SentimentAnalyzer
+const stemmer = natural.PorterStemmer
+const analyzer = new Analyzer("English", stemmer, "afinn")
 const client = new twitter({
   consumer_key: process.env.API_KEY,
   consumer_secret: process.env.API_SECRET_KEY,
@@ -27,32 +27,49 @@ const params = {
   tweet_mode: 'extended',
   result_type: 'recent'
 }
+const baseObject = { tweets: [], max_id: null }
+const stopCriteria = (x) => x.length < 100
 
-tweets.then(tweets => polishTweets(tweets))
-  .then(polishedTweets => getTweetSentiment(polishedTweets))
-  .then(sentimentTweets => writeFile(sentimentTweets, 'sentimentTweets'))
+fetchTweetsWhile(baseObject, stopCriteria, fetchFilteredTweets, params)
+  .then(tweets => polishTweets(tweets))
+  .then(polishedTweets => writeFile(polishedTweets, 'polishedTweets'))
+  // .then(sentimentTweets => writeFile(sentimentTweets, 'sentimentTweets'))
   .catch(err => console.log(err))
 
-getTweets.then(tweets => {
-  const min_id = tweets.statuses[0].id
-  const max_id = tweets.statuses[tweets.statuses.length-1].id
-  const tweets = tweets.statuses.tweets.statusesmap(x => x.text)
-
-  removeRetweets(tweets).then(removedRetweets => {
-    if (removedRetweets.length >= 100) {
-      //continute
+function fetchTweetsWhile(data, condition, action) {
+  var whilst = data => {
+    if (condition(data.tweets)) {
+      let max_id = data.max_id ? data.max_id : null
+      params.max_id = max_id
+      return action(data.tweets, params).then(whilst)
     } else {
-      // get more tweets
+      return Promise.resolve(data.tweets)
     }
+  }
+
+  return whilst(data)
+}
+
+function fetchFilteredTweets(oldList, params) {
+  return new Promise((resolve, reject) => {
+    getTweets(params).then(tweets => {
+      removeRetweets(tweets.statuses.map(t => t.full_text)).then(filteredRetweets => {
+        resolve({
+          tweets: oldList.concat(filteredRetweets),
+          max_id: tweets.statuses[tweets.statuses.length - 1].id
+        })
+      })
+    })
   })
-})
+}
 
 function getTweets(params) {
+  return client.get('search/tweets', params)
+}
+
+function removeRetweets(tweets) {
   return new Promise((resolve, reject) => {
-    client.get('search/tweets', params).then(tweets => {
-      // params.max_id = tweets.statuses[tweets.statuses.length-1].id
-      resolve(tweets)
-    }).catch(err => console.log(err))
+    resolve(tweets.filter(x => !(/^RT @.*/.test(x))))
   })
 }
 
@@ -66,14 +83,6 @@ function polishTweets(tweetsList) {
   })
 }
 
-//tokenize 
-//get sentiment
-
-function removeRetweets(tweetsList) {
-  return new Promise((resolve, reject) => {
-    resolve(tweetsList.filter(x => !(/^RT @.*/.test(x))))
-  })
-}
 
 function removeURLs(tweets) {
   return new Promise((resolve, reject) => {
@@ -103,7 +112,7 @@ function getTweetSentiment(tokenizedTweets) {
   return new Promise((resolve, reject) => {
     const sentiments = tokenizedTweets.map(x => analyzer.getSentiment(x))
     resolve(sentiments.map((sentiment, index) => {
-      return [sentiment, tokenizedTweets[index].join(' ')];
+      return [sentiment, tokenizedTweets[index].join(' ')]
     }))
   })
 }
@@ -113,7 +122,8 @@ function writeFile(json, path) {
 
   checkForFile(filename, () => {
     fs.writeFileSync(filename, JSON.stringify(json, null, 2), 'utf-8', { flag: 'wx' }, err => {
-      if (err) console.log(err); return;
+      if (err) console.log(err)
+      return
     })
   })
 }
@@ -123,7 +133,7 @@ function checkForFile(filename, callback) {
     if (exists) callback()
     else {
       fs.writeFile(filename, { flag: 'wx' }, function (err, data) {
-        callback();
+        callback()
       })
     }
   })
