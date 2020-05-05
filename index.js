@@ -16,26 +16,23 @@ const twitter = new Twitter({
   access_token_key: process.env.ACCESS_TOKEN,
   access_token_secret: process.env.ACCESS_TOKEN_SECRET
 })
-const until = moment().subtract(6, "days").format("yyyy-MM-DD")
 const params = {
   q: 'trump',
   lang: 'en',
   include_entities: false,
   count: 100,
-  until,
+  until: moment().subtract(6, "days").format("yyyy-MM-DD"),
   tweet_mode: 'extended',
   result_type: 'recent'
 }
-const baseObject = { tweets: [], max_id: null }
-const stopCriteria = (x) => x.length < 100
 
-fetchTweetsWhile(baseObject, stopCriteria, fetchFilteredTweets, params)
+fetchTweetsWhile({ tweets: [], max_id: null }, x => x.length < 100, fetchFilteredTweets, params)
   .then(tweets => polishTweets(tweets))
   .then(polishedTweets => writeFile(polishedTweets, 'filtered_tweets'))
-  // .then(sentimentTweets => writeFile(sentimentTweets, 'sentimentTweets'))
+  .then(sentimentTweets => writeFile(sentimentTweets, 'sentimentTweets'))
   .catch(err => console.log(err))
 
-function fetchTweetsWhile(data, condition, action, params) {  
+function fetchTweetsWhile(data, condition, action, params) {
   var whilst = data => {
     if (condition(data.tweets)) {
       params.max_id = data.max_id ? data.max_id : null
