@@ -1,17 +1,16 @@
 require("dotenv").config({ path: "./environment/development.env" })
-const twitter = require('twitter')
+const Twitter = require('twitter')
 const moment = require("moment")
 const { filter, zip } = require('rxjs')
 const { map } = require('rxjs/operators')
 const natural = require("natural")
-const util = require('util')
 const tokenizer = new natural.WordTokenizer()
 const fs = require('fs')
 natural.PorterStemmer.attach()
 const Analyzer = natural.SentimentAnalyzer
 const stemmer = natural.PorterStemmer
 const analyzer = new Analyzer("English", stemmer, "afinn")
-const client = new twitter({
+const twitter = new Twitter({
   consumer_key: process.env.API_KEY,
   consumer_secret: process.env.API_SECRET_KEY,
   access_token_key: process.env.ACCESS_TOKEN,
@@ -32,15 +31,14 @@ const stopCriteria = (x) => x.length < 100
 
 fetchTweetsWhile(baseObject, stopCriteria, fetchFilteredTweets, params)
   .then(tweets => polishTweets(tweets))
-  .then(polishedTweets => writeFile(polishedTweets, 'polishedTweets'))
+  .then(polishedTweets => writeFile(polishedTweets, 'filtered_tweets'))
   // .then(sentimentTweets => writeFile(sentimentTweets, 'sentimentTweets'))
   .catch(err => console.log(err))
 
-function fetchTweetsWhile(data, condition, action) {
+function fetchTweetsWhile(data, condition, action, params) {  
   var whilst = data => {
     if (condition(data.tweets)) {
-      let max_id = data.max_id ? data.max_id : null
-      params.max_id = max_id
+      params.max_id = data.max_id ? data.max_id : null
       return action(data.tweets, params).then(whilst)
     } else {
       return Promise.resolve(data.tweets)
@@ -52,19 +50,27 @@ function fetchTweetsWhile(data, condition, action) {
 
 function fetchFilteredTweets(oldList, params) {
   return new Promise((resolve, reject) => {
-    getTweets(params).then(tweets => {
-      removeRetweets(tweets.statuses.map(t => t.full_text)).then(filteredRetweets => {
-        resolve({
-          tweets: oldList.concat(filteredRetweets),
-          max_id: tweets.statuses[tweets.statuses.length - 1].id
-        })
-      })
-    })
+    getTweets(params)
+      .then(tweets => removeRetweets(tweets.statuses.map(t => t.full_text))
+        .then(nonRetweets => removeDuplicates(oldList.concat(nonRetweets)))
+        .then(uniqueTweets => {
+          resolve({
+            tweets: uniqueTweets,
+            max_id: tweets.statuses[tweets.statuses.length - 1].id
+          })
+        }).catch(err => console.log(err))
+      )
+  })
+}
+
+function removeDuplicates(tweets) {
+  return new Promise((resolve, reject) => {
+    resolve(Array.from(new Set(tweets)))
   })
 }
 
 function getTweets(params) {
-  return client.get('search/tweets', params)
+  return twitter.get('search/tweets', params)
 }
 
 function removeRetweets(tweets) {
