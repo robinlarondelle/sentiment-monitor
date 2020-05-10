@@ -29,7 +29,7 @@ const params = {
 fetchTweetsWhile({ tweets: [], max_id: null }, x => x.length < 100, fetchFilteredTweets, params)
   .then(tweets => polishTweets(tweets))
   .then(polishedTweets => writeFile(polishedTweets, 'filtered_tweets'))
-  .then(sentimentTweets => writeFile(sentimentTweets, 'sentimentTweets'))
+  // .then(sentimentTweets => writeFile(sentimentTweets, 'sentimentTweets'))
   .catch(err => console.log(err))
 
 function fetchTweetsWhile(data, condition, action, params) {
@@ -95,7 +95,7 @@ function removeURLs(tweets) {
 
 function removeMentions(tweets) {
   return new Promise((resolve, reject) => {
-    resolve(tweets.map(x => x.replace(/\B([@][\w_-]+)/g, '').trim()))
+    resolve(tweets.map(x => x.replace(/\B([@#][\w_-]+)/g, '').trim()))
   })
 }
 
