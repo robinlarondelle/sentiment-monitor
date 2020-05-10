@@ -3,13 +3,11 @@ const Twitter = require('twitter')
 const moment = require("moment")
 const { filter, zip } = require('rxjs')
 const { map } = require('rxjs/operators')
-const natural = require("natural")
-const tokenizer = new natural.WordTokenizer()
 const fs = require('fs')
-natural.PorterStemmer.attach()
-const Analyzer = natural.SentimentAnalyzer
-const stemmer = natural.PorterStemmer
-const analyzer = new Analyzer("English", stemmer, "afinn")
+
+const Sentiment = require('sentiment');
+const sentiment = new Sentiment();
+
 const twitter = new Twitter({
   consumer_key: process.env.API_KEY,
   consumer_secret: process.env.API_SECRET_KEY,
@@ -17,10 +15,10 @@ const twitter = new Twitter({
   access_token_secret: process.env.ACCESS_TOKEN_SECRET
 })
 const params = {
-  q: 'trump',
+  q: 'coca-cola',
   lang: 'en',
   include_entities: false,
-  count: 100,
+  count: 10,
   until: moment().subtract(6, "days").format("yyyy-MM-DD"),
   tweet_mode: 'extended',
   result_type: 'recent'
@@ -28,9 +26,11 @@ const params = {
 
 fetchTweetsWhile({ tweets: [], max_id: null }, x => x.length < 100, fetchFilteredTweets, params)
   .then(tweets => polishTweets(tweets))
-  .then(polishedTweets => writeFile(polishedTweets, 'filtered_tweets'))
-  // .then(sentimentTweets => writeFile(sentimentTweets, 'sentimentTweets'))
-  .catch(err => console.log(err))
+  .then(polishedTweets => getTweetSentiment(polishedTweets))
+  .then(sentimentTweets => {
+    writeFile(sentimentTweets, 'sentimentTweets')
+    printSentiment(sentimentTweets)
+  }).catch(err => console.log(err))
 
 function fetchTweetsWhile(data, condition, action, params) {
   var whilst = data => {
@@ -80,12 +80,10 @@ function polishTweets(tweetsList) {
   return new Promise((resolve, reject) => {
     removeURLs(tweetsList)
       .then(filteredURLs => removeMentions(filteredURLs))
-      .then(filteredMentions => removeEmojis(filteredMentions))
-      .then(filteredEmojis => resolve(filteredEmojis))
+      .then(filteredMentions => resolve(filteredMentions))
       .catch(err => console.log(err))
   })
 }
-
 
 function removeURLs(tweets) {
   return new Promise((resolve, reject) => {
@@ -99,24 +97,38 @@ function removeMentions(tweets) {
   })
 }
 
-function removeEmojis(tweets) {
-  return new Promise((resolve, reject) => {
-    resolve(tweets.map(x => x.replace(/([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g, '').trim()))
-  })
+function printSentiment(tweets) {
+  console.log(`Amount of positive tweets: ${tweets.filter(t => t.score > 0).length}`)
+  console.log(`Amount of negative tweets: ${tweets.filter(t => t.score < 0).length}`)
+  console.log(`Amount of neutral tweets: ${tweets.filter(t => t.score == 0).length}`)
+
+  console.log(`\nTop 3 most positive tweets:`)
+  tweets.sort(sortTweets("score", "desc")).slice(0, 3).forEach(x => console.log(x.tokens.join(' ')))
+  console.log(`\nTop 3 most negative tweets:`)
+  tweets.sort(sortTweets("score", "asc")).slice(0, 3).forEach(x => console.log(x.tokens.join(' ')))
 }
 
-function tokenizeTweets(tweets) {
-  return new Promise((resolve, reject) => {
-    resolve(tweets.map(x => tokenizer.tokenize(x)))
-  })
+function sortTweets(score,order) {
+  let sort_order = 1;
+  if(order === "desc") sort_order = -1;
+
+  return function (a, b){
+      // a should come before b in the sorted order
+      if(a[score] < b[score]){
+              return -1 * sort_order;
+      // a should come after b in the sorted order
+      }else if(a[score] > b[score]){
+              return 1 * sort_order;
+      // a and b are the same
+      }else{
+              return 0 * sort_order;
+      }
+  }
 }
 
-function getTweetSentiment(tokenizedTweets) {
+function getTweetSentiment(tweets) {
   return new Promise((resolve, reject) => {
-    const sentiments = tokenizedTweets.map(x => analyzer.getSentiment(x))
-    resolve(sentiments.map((sentiment, index) => {
-      return [sentiment, tokenizedTweets[index].join(' ')]
-    }))
+    resolve(tweets.map(x => sentiment.analyze(x)))
   })
 }
 

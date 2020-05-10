@@ -1,1 +1,3567 @@
-undefined
+[
+  {
+    "score": -6,
+    "comparative": -0.16216216216216217,
+    "calculation": [
+      {
+        "fuck": -4
+      },
+      {
+        "dumped": -2
+      },
+      {
+        "pollution": -2
+      },
+      {
+        "responsible": 2
+      }
+    ],
+    "tokens": [
+      "four",
+      "of",
+      "the",
+      "world's",
+      "largest",
+      "users",
+      "of",
+      "plastic",
+      "packaging",
+      "-",
+      "and",
+      "-",
+      "are",
+      "responsible",
+      "for",
+      "half",
+      "a",
+      "million",
+      "tonnes",
+      "of",
+      "plastic",
+      "pollution",
+      "that",
+      "are",
+      "burnt",
+      "or",
+      "dumped",
+      "each",
+      "year",
+      "in",
+      "six",
+      "developing",
+      "countries",
+      "by",
+      "2025",
+      "fuck",
+      "off"
+    ],
+    "words": [
+      "fuck",
+      "dumped",
+      "pollution",
+      "responsible"
+    ],
+    "positive": [
+      "responsible"
+    ],
+    "negative": [
+      "fuck",
+      "dumped",
+      "pollution"
+    ]
+  },
+  {
+    "score": -4,
+    "comparative": -0.3076923076923077,
+    "calculation": [
+      {
+        "shit": -4
+      },
+      {
+        "ass": -4
+      },
+      {
+        "strong": 2
+      },
+      {
+        "clean": 2
+      }
+    ],
+    "tokens": [
+      "i’m",
+      "about",
+      "to",
+      "start",
+      "using",
+      "coca-cola",
+      "to",
+      "clean",
+      "my",
+      "bathroom",
+      "strong",
+      "ass",
+      "shit"
+    ],
+    "words": [
+      "shit",
+      "ass",
+      "strong",
+      "clean"
+    ],
+    "positive": [
+      "strong",
+      "clean"
+    ],
+    "negative": [
+      "shit",
+      "ass"
+    ]
+  },
+  {
+    "score": -3,
+    "comparative": -0.13043478260869565,
+    "calculation": [
+      {
+        "nuts": -3
+      }
+    ],
+    "tokens": [
+      "they",
+      "used",
+      "to",
+      "vacuum",
+      "steel",
+      "nuts",
+      "and",
+      "bolts",
+      "and",
+      "coca",
+      "cola",
+      "on",
+      "laminated",
+      "flooring",
+      "had",
+      "10",
+      "year",
+      "old",
+      "me",
+      "wanting",
+      "to",
+      "do",
+      "chores"
+    ],
+    "words": [
+      "nuts"
+    ],
+    "positive": [],
+    "negative": [
+      "nuts"
+    ]
+  },
+  {
+    "score": -3,
+    "comparative": -0.08571428571428572,
+    "calculation": [
+      {
+        "like": -2
+      },
+      {
+        "champions": 2
+      },
+      {
+        "disgusting": -3
+      }
+    ],
+    "tokens": [
+      "coca",
+      "cola",
+      "disgusting",
+      "don't",
+      "drink",
+      "ever",
+      "as",
+      "i",
+      "say",
+      "only",
+      "people",
+      "in",
+      "the",
+      "south",
+      "drink",
+      "coke",
+      "that's",
+      "why",
+      "pepsi",
+      "is",
+      "the",
+      "soda",
+      "of",
+      "champions",
+      "if",
+      "you",
+      "don't",
+      "like",
+      "soda",
+      "drink",
+      "ginger",
+      "ale",
+      "or",
+      "brita",
+      "water"
+    ],
+    "words": [
+      "like",
+      "champions",
+      "disgusting"
+    ],
+    "positive": [
+      "champions"
+    ],
+    "negative": [
+      "like",
+      "disgusting"
+    ]
+  },
+  {
+    "score": -3,
+    "comparative": -0.21428571428571427,
+    "calculation": [
+      {
+        "worst": -3
+      }
+    ],
+    "tokens": [
+      "did",
+      "you",
+      "know",
+      "that",
+      "coca-cola",
+      "is",
+      "the",
+      "worst",
+      "thing",
+      "made",
+      "in",
+      "a",
+      "watch",
+      "factory"
+    ],
+    "words": [
+      "worst"
+    ],
+    "positive": [],
+    "negative": [
+      "worst"
+    ]
+  },
+  {
+    "score": -3,
+    "comparative": -0.2727272727272727,
+    "calculation": [
+      {
+        "shit": -4
+      },
+      {
+        "share": 1
+      }
+    ],
+    "tokens": [
+      "you",
+      "should",
+      "have",
+      "to",
+      "share",
+      "a",
+      "coca-cola",
+      "with",
+      "the",
+      "shit",
+      "negan"
+    ],
+    "words": [
+      "shit",
+      "share"
+    ],
+    "positive": [
+      "share"
+    ],
+    "negative": [
+      "shit"
+    ]
+  },
+  {
+    "score": -2,
+    "comparative": -0.1111111111111111,
+    "calculation": [
+      {
+        "problem": -2
+      }
+    ],
+    "tokens": [
+      "i",
+      "was",
+      "able",
+      "to",
+      "make",
+      "the",
+      "jarritos",
+      "logo",
+      "so",
+      "idk",
+      "why",
+      "the",
+      "coca-cola",
+      "one",
+      "is",
+      "such",
+      "a",
+      "problem"
+    ],
+    "words": [
+      "problem"
+    ],
+    "positive": [],
+    "negative": [
+      "problem"
+    ]
+  },
+  {
+    "score": -2,
+    "comparative": -0.08333333333333333,
+    "calculation": [
+      {
+        "problem": -2
+      }
+    ],
+    "tokens": [
+      "brendan",
+      "bought",
+      "root",
+      "beer",
+      "to",
+      "mix",
+      "with",
+      "vanilla",
+      "crown",
+      "royal",
+      "and",
+      "i’m",
+      "now",
+      "addicted",
+      "to",
+      "a",
+      "amp",
+      "w",
+      "instead",
+      "of",
+      "coca-cola",
+      "it’s",
+      "a",
+      "problem"
+    ],
+    "words": [
+      "problem"
+    ],
+    "positive": [],
+    "negative": [
+      "problem"
+    ]
+  },
+  {
+    "score": -1,
+    "comparative": -0.058823529411764705,
+    "calculation": [
+      {
+        "😔": -1
+      }
+    ],
+    "tokens": [
+      "coca",
+      "cola",
+      "and",
+      "cake",
+      "at",
+      "this",
+      "hour",
+      "🙃",
+      "when",
+      "it’s",
+      "not",
+      "heartbreak",
+      "i",
+      "am",
+      "dealing",
+      "with",
+      "😔"
+    ],
+    "words": [
+      "😔"
+    ],
+    "positive": [],
+    "negative": [
+      "😔"
+    ]
+  },
+  {
+    "score": -1,
+    "comparative": -0.047619047619047616,
+    "calculation": [
+      {
+        "shoot": -1
+      }
+    ],
+    "tokens": [
+      "went",
+      "to",
+      "shoot",
+      "a",
+      "standup",
+      "at",
+      "coca",
+      "cola",
+      "park",
+      "and",
+      "there",
+      "were",
+      "fans",
+      "tailgating",
+      "in",
+      "the",
+      "parking",
+      "lot",
+      "fans",
+      "stay",
+      "undefeated"
+    ],
+    "words": [
+      "shoot"
+    ],
+    "positive": [],
+    "negative": [
+      "shoot"
+    ]
+  },
+  {
+    "score": -1,
+    "comparative": -0.05555555555555555,
+    "calculation": [
+      {
+        "pure": 1
+      },
+      {
+        "stole": -2
+      }
+    ],
+    "tokens": [
+      "i’m",
+      "surprised",
+      "nobody",
+      "stole",
+      "my",
+      "fancy",
+      "coca",
+      "cola",
+      "from",
+      "mexico",
+      "it’s",
+      "made",
+      "with",
+      "pure",
+      "cane",
+      "sugar",
+      "you",
+      "know"
+    ],
+    "words": [
+      "pure",
+      "stole"
+    ],
+    "positive": [
+      "pure"
+    ],
+    "negative": [
+      "stole"
+    ]
+  },
+  {
+    "score": -1,
+    "comparative": -0.05263157894736842,
+    "calculation": [
+      {
+        "fucking": -4
+      },
+      {
+        "good": 3
+      }
+    ],
+    "tokens": [
+      "this",
+      "mf",
+      "drinking",
+      "coca",
+      "cola",
+      "cherry",
+      "out",
+      "of",
+      "a",
+      "wine",
+      "glass",
+      "the",
+      "one",
+      "good",
+      "billionaire",
+      "my",
+      "fat",
+      "fucking",
+      "fanny"
+    ],
+    "words": [
+      "fucking",
+      "good"
+    ],
+    "positive": [
+      "good"
+    ],
+    "negative": [
+      "fucking"
+    ]
+  },
+  {
+    "score": -1,
+    "comparative": -0.08333333333333333,
+    "calculation": [
+      {
+        "wrong": -2
+      },
+      {
+        "want": 1
+      }
+    ],
+    "tokens": [
+      "coke",
+      "just",
+      "said",
+      "people",
+      "want",
+      "more",
+      "plastic",
+      "bottles",
+      "let's",
+      "prove",
+      "them",
+      "wrong"
+    ],
+    "words": [
+      "wrong",
+      "want"
+    ],
+    "positive": [
+      "want"
+    ],
+    "negative": [
+      "wrong"
+    ]
+  },
+  {
+    "score": -1,
+    "comparative": -0.034482758620689655,
+    "calculation": [
+      {
+        "no": -1
+      }
+    ],
+    "tokens": [
+      "no",
+      "it",
+      "wasn't",
+      "these",
+      "pictures",
+      "show",
+      "a",
+      "marketing",
+      "campaign",
+      "not",
+      "when",
+      "coca-cola",
+      "first",
+      "came",
+      "to",
+      "france",
+      "the",
+      "drink",
+      "was",
+      "introduced",
+      "in",
+      "france",
+      "about",
+      "30",
+      "years",
+      "earlier",
+      "more",
+      "information",
+      "here"
+    ],
+    "words": [
+      "no"
+    ],
+    "positive": [],
+    "negative": [
+      "no"
+    ]
+  },
+  {
+    "score": -1,
+    "comparative": -0.03225806451612903,
+    "calculation": [
+      {
+        "great": 3
+      },
+      {
+        "stopped": -1
+      },
+      {
+        "bad": -3
+      }
+    ],
+    "tokens": [
+      "this",
+      "month",
+      "it",
+      "is",
+      "20",
+      "years",
+      "since",
+      "i",
+      "have",
+      "had",
+      "coffee",
+      "coca",
+      "cola",
+      "or",
+      "milk",
+      "had",
+      "a",
+      "bad",
+      "cold",
+      "that",
+      "month",
+      "and",
+      "stopped",
+      "all",
+      "three",
+      "and",
+      "have",
+      "felt",
+      "great",
+      "ever",
+      "since"
+    ],
+    "words": [
+      "great",
+      "stopped",
+      "bad"
+    ],
+    "positive": [
+      "great"
+    ],
+    "negative": [
+      "stopped",
+      "bad"
+    ]
+  },
+  {
+    "score": -1,
+    "comparative": -0.08333333333333333,
+    "calculation": [
+      {
+        "😖": -1
+      }
+    ],
+    "tokens": [
+      "been",
+      "craving",
+      "nothing",
+      "but",
+      "pickles",
+      "pizza",
+      "ice",
+      "cream",
+      "and",
+      "coca",
+      "cola",
+      "😖"
+    ],
+    "words": [
+      "😖"
+    ],
+    "positive": [],
+    "negative": [
+      "😖"
+    ]
+  },
+  {
+    "score": -1,
+    "comparative": -0.14285714285714285,
+    "calculation": [
+      {
+        "😔": -1
+      }
+    ],
+    "tokens": [
+      "nawt",
+      "a",
+      "coca",
+      "cola",
+      "belt",
+      "buckle",
+      "😔"
+    ],
+    "words": [
+      "😔"
+    ],
+    "positive": [],
+    "negative": [
+      "😔"
+    ]
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "when",
+      "i",
+      "was",
+      "in",
+      "hs",
+      "i",
+      "had",
+      "chronic",
+      "migraines",
+      "and",
+      "had",
+      "excedrin",
+      "and",
+      "coca",
+      "cola",
+      "stocked",
+      "in",
+      "the",
+      "nurses",
+      "office",
+      "bc",
+      "caffiene",
+      "was",
+      "the",
+      "only",
+      "thing",
+      "that",
+      "eased",
+      "them",
+      "🙃🙃🙃"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "sprite+coca",
+      "cola",
+      "with",
+      "a",
+      "bit",
+      "of",
+      "licorice",
+      "and",
+      "mint"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "coca",
+      "cola",
+      "and",
+      "cake"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "i",
+      "don’t",
+      "know",
+      "what",
+      "it",
+      "is",
+      "but",
+      "that",
+      "mcdonalds",
+      "coca",
+      "cola",
+      "just",
+      "hits",
+      "different",
+      "❤️"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "he’s",
+      "always",
+      "drinking",
+      "coca",
+      "cola",
+      "maybe",
+      "that’s",
+      "his",
+      "secret"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "do",
+      "you",
+      "really",
+      "wanna",
+      "live",
+      "in",
+      "a",
+      "world",
+      "without",
+      "coca",
+      "cola"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "have",
+      "a",
+      "person",
+      "playing",
+      "water",
+      "polo",
+      "coca-cola"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "🤗",
+      "not",
+      "when",
+      "you",
+      "have",
+      "money",
+      "for",
+      "coca-cola",
+      "as",
+      "advised",
+      "by",
+      "a",
+      "stranger"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "those",
+      "prices",
+      "for",
+      "real",
+      "coca",
+      "cola",
+      "cost",
+      "is",
+      "15",
+      "bucks",
+      "at",
+      "mcdonald"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "i’m",
+      "racing",
+      "the",
+      "“coca-cola",
+      "is",
+      "kokomo",
+      "elite”",
+      "at",
+      "7",
+      "15p",
+      "et",
+      "tonight",
+      "check",
+      "it",
+      "out",
+      "live",
+      "👉🏻"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "pepsi",
+      "hey",
+      "can",
+      "i",
+      "copy",
+      "your",
+      "homework",
+      "coca",
+      "cola",
+      "sure",
+      "just",
+      "change",
+      "it",
+      "up",
+      "a",
+      "little",
+      "so",
+      "the",
+      "teacher",
+      "doesn't",
+      "notice"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "thinking",
+      "about",
+      "making",
+      "a",
+      "texas",
+      "sheet",
+      "cake",
+      "or",
+      "a",
+      "coca",
+      "cola",
+      "cake",
+      "👀"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "i",
+      "can",
+      "feel",
+      "that",
+      "coca-cola",
+      "sponsored",
+      "this"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "body",
+      "armors",
+      "used",
+      "to",
+      "b",
+      "so",
+      "fye",
+      "until",
+      "coca",
+      "cola",
+      "got",
+      "involved",
+      "smh"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "coca",
+      "cola",
+      "probably",
+      "puts",
+      "hfcs",
+      "in",
+      "it",
+      "or",
+      "something"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "what",
+      "happened",
+      "to",
+      "the",
+      "indians",
+      "who",
+      "used",
+      "to",
+      "fish",
+      "using",
+      "mentos",
+      "and",
+      "coca",
+      "cola",
+      "by",
+      "digging",
+      "up",
+      "holes",
+      "in",
+      "the",
+      "ground",
+      "i",
+      "reckon",
+      "they’re",
+      "the",
+      "ones",
+      "who",
+      "started",
+      "the",
+      "corona",
+      "virus"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [
+      {
+        "champions": 2
+      },
+      {
+        "sadly": -2
+      }
+    ],
+    "tokens": [
+      "time",
+      "for",
+      "a",
+      "reminder",
+      "that",
+      "the",
+      "only",
+      "people",
+      "that",
+      "drink",
+      "coca",
+      "cola",
+      "are",
+      "people",
+      "down",
+      "south",
+      "the",
+      "only",
+      "reason",
+      "it",
+      "sells",
+      "elsewhere",
+      "in",
+      "the",
+      "country",
+      "is",
+      "because",
+      "some",
+      "people",
+      "sadly",
+      "think",
+      "coke",
+      "outsells",
+      "pepsi",
+      "🙄",
+      "drink",
+      "pepsi",
+      "y'all",
+      "it's",
+      "real",
+      "soda",
+      "and",
+      "it's",
+      "also",
+      "the",
+      "soda",
+      "of",
+      "champions"
+    ],
+    "words": [
+      "champions",
+      "sadly"
+    ],
+    "positive": [
+      "champions"
+    ],
+    "negative": [
+      "sadly"
+    ]
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [
+      {
+        "nice": 3
+      },
+      {
+        "worried": -3
+      }
+    ],
+    "tokens": [
+      "hunting",
+      "for",
+      "food",
+      "i’m",
+      "skinny",
+      "you",
+      "should",
+      "be",
+      "worried",
+      "you",
+      "will",
+      "be",
+      "nice",
+      "meal",
+      "i",
+      "will",
+      "bring",
+      "the",
+      "coca-cola",
+      "😁😁😁😁😁😁😁"
+    ],
+    "words": [
+      "nice",
+      "worried"
+    ],
+    "positive": [
+      "nice"
+    ],
+    "negative": [
+      "worried"
+    ]
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "coca-cola",
+      "of",
+      "kokomo",
+      "indy",
+      "elite",
+      "series",
+      "final",
+      "contest",
+      "of",
+      "the",
+      "season",
+      "sym",
+      "tv",
+      "is",
+      "live",
+      "with",
+      "tonight's",
+      "500",
+      "mile",
+      "race",
+      "from",
+      "indianapolis"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "late",
+      "night",
+      "thought",
+      "i",
+      "wanna",
+      "know",
+      "if",
+      "is",
+      "a",
+      "pepsi",
+      "or",
+      "coca",
+      "cola",
+      "kinda",
+      "gal"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "here's",
+      "an",
+      "insight",
+      "on",
+      "why",
+      "coca-cola",
+      "has",
+      "paused",
+      "their",
+      "most",
+      "paid",
+      "marketing",
+      "efforts"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "amp",
+      "re-signs",
+      "afl",
+      "players",
+      "but",
+      "loses",
+      "coca-cola",
+      "mandate"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [
+      {
+        "missed": -2
+      },
+      {
+        "huge": 1
+      },
+      {
+        "drop": 1
+      }
+    ],
+    "tokens": [
+      "if",
+      "they",
+      "don't",
+      "drop",
+      "that",
+      "giant",
+      "pop-rock",
+      "into",
+      "a",
+      "huge",
+      "vat",
+      "of",
+      "coca",
+      "cola",
+      "this",
+      "movie",
+      "really",
+      "missed",
+      "the",
+      "mark"
+    ],
+    "words": [
+      "missed",
+      "huge",
+      "drop"
+    ],
+    "positive": [
+      "huge",
+      "drop"
+    ],
+    "negative": [
+      "missed"
+    ]
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "fans",
+      "will",
+      "not",
+      "be",
+      "allowed",
+      "at",
+      "races",
+      "but",
+      "they",
+      "will",
+      "be",
+      "televised",
+      "by",
+      "with",
+      "two",
+      "—",
+      "the",
+      "may",
+      "17",
+      "race",
+      "at",
+      "darlington",
+      "and",
+      "the",
+      "coca-cola",
+      "600",
+      "on",
+      "may",
+      "24",
+      "in",
+      "charlotte",
+      "—",
+      "on",
+      "the",
+      "fox",
+      "broadcast",
+      "network",
+      "and",
+      "the",
+      "remaining",
+      "five",
+      "on",
+      "may",
+      "20"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "the",
+      "new",
+      "schedule",
+      "includes",
+      "cup",
+      "races",
+      "on",
+      "may",
+      "17",
+      "and",
+      "20th",
+      "at",
+      "darlington",
+      "the",
+      "coca-cola",
+      "600",
+      "at",
+      "charlotte",
+      "on",
+      "may",
+      "24",
+      "and",
+      "then",
+      "another",
+      "race",
+      "at",
+      "charlotte",
+      "on",
+      "may",
+      "27"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "nah",
+      "mcdonald’s",
+      "coca",
+      "cola",
+      "hits",
+      "a",
+      "whole",
+      "lot",
+      "different"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "or",
+      "you",
+      "could",
+      "go",
+      "to",
+      "your",
+      "squad",
+      "car",
+      "open",
+      "your",
+      "lunch",
+      "and",
+      "have",
+      "a",
+      "coke",
+      "i",
+      "mean",
+      "coca-cola",
+      "of",
+      "course",
+      "you",
+      "don't",
+      "have",
+      "to",
+      "obey",
+      "bs",
+      "orders"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "between",
+      "marx",
+      "and",
+      "coca",
+      "cola",
+      "is",
+      "the",
+      "name",
+      "of",
+      "a",
+      "book",
+      "i",
+      "wanted",
+      "to",
+      "read"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "coca",
+      "cola",
+      "always",
+      "✌🏻🥴"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "disolve",
+      "it",
+      "in",
+      "a",
+      "pot",
+      "of",
+      "coca",
+      "cola"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "the",
+      "glass",
+      "coca",
+      "cola",
+      "bottle",
+      "i--",
+      "👏🏼👏🏼👏🏼👏🏼👏🏼"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "to",
+      "think",
+      "the",
+      "coca-cola",
+      "company",
+      "even",
+      "ripped",
+      "off",
+      "the",
+      "peckham",
+      "spring",
+      "idea",
+      "with",
+      "their",
+      "very",
+      "own",
+      "dasani",
+      "water",
+      "🤣🤣🤣"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "in",
+      "usa",
+      "we",
+      "say",
+      "coke",
+      "but",
+      "in",
+      "france",
+      "we",
+      "say",
+      "coca-cola",
+      "caryl",
+      "and",
+      "negan",
+      "are",
+      "third",
+      "why",
+      "is",
+      "there",
+      "written",
+      "coca-cola",
+      "on",
+      "the",
+      "bottles",
+      "they",
+      "hold",
+      "we",
+      "generally",
+      "talk",
+      "about",
+      "the",
+      "american",
+      "globalization",
+      "in",
+      "the",
+      "world",
+      "so",
+      "what",
+      "does",
+      "it",
+      "mean",
+      "is",
+      "the",
+      "french",
+      "globalization",
+      "expending"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "the",
+      "only",
+      "one",
+      "that",
+      "caught",
+      "my",
+      "eye",
+      "was",
+      "the",
+      "coca-cola",
+      "card"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "did",
+      "you",
+      "know",
+      "that",
+      "north",
+      "korea",
+      "and",
+      "cuba",
+      "are",
+      "the",
+      "only",
+      "places",
+      "you",
+      "can't",
+      "buy",
+      "coca-cola"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "miller",
+      "high",
+      "life",
+      "jack",
+      "daniels",
+      "coca",
+      "cola"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "yall",
+      "realize",
+      "the",
+      "second",
+      "article",
+      "is",
+      "about",
+      "putting",
+      "coca-cola",
+      "and",
+      "corn",
+      "in",
+      "your",
+      "prostate",
+      "right"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "lola",
+      "by",
+      "the",
+      "kinks"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "« share",
+      "a",
+      "coca-cola",
+      "with",
+      "caryl »"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "always",
+      "coca",
+      "cola"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [
+      {
+        "better": 2
+      },
+      {
+        "feeling": 1
+      },
+      {
+        "worse": -3
+      }
+    ],
+    "tokens": [
+      "i",
+      "had",
+      "the",
+      "worse",
+      "hangover",
+      "this",
+      "morning",
+      "but",
+      "this",
+      "coca",
+      "cola",
+      "got",
+      "me",
+      "feeling",
+      "so",
+      "much",
+      "better"
+    ],
+    "words": [
+      "better",
+      "feeling",
+      "worse"
+    ],
+    "positive": [
+      "better",
+      "feeling"
+    ],
+    "negative": [
+      "worse"
+    ]
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "rui",
+      "went",
+      "to",
+      "the",
+      "ribeira",
+      "and",
+      "ate",
+      "gelato",
+      "and",
+      "drank",
+      "coca",
+      "cola"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "a",
+      "pepsi",
+      "bottle",
+      "and",
+      "a",
+      "coca",
+      "cola",
+      "glass"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 0,
+    "comparative": 0,
+    "calculation": [],
+    "tokens": [
+      "how",
+      "much",
+      "would",
+      "that",
+      "coca",
+      "cola",
+      "sign",
+      "be",
+      "wonder"
+    ],
+    "words": [],
+    "positive": [],
+    "negative": []
+  },
+  {
+    "score": 1,
+    "comparative": 0.024390243902439025,
+    "calculation": [
+      {
+        "join": 1
+      },
+      {
+        "please": 1
+      },
+      {
+        "verdict": -1
+      }
+    ],
+    "tokens": [
+      "this",
+      "tuesday",
+      "5",
+      "5",
+      "11am",
+      "doris",
+      "cheng",
+      "will",
+      "be",
+      "interviewing",
+      "jordanna",
+      "thigpen",
+      "a",
+      "graduate",
+      "of",
+      "intensive",
+      "advocacy",
+      "program",
+      "about",
+      "her",
+      "trial",
+      "verdict",
+      "in",
+      "la",
+      "please",
+      "join",
+      "them",
+      "for",
+      "a",
+      "zoom",
+      "chat",
+      "about",
+      "the",
+      "intellectual",
+      "property",
+      "amp",
+      "trial",
+      "challenges",
+      "of",
+      "this",
+      "case"
+    ],
+    "words": [
+      "join",
+      "please",
+      "verdict"
+    ],
+    "positive": [
+      "join",
+      "please"
+    ],
+    "negative": [
+      "verdict"
+    ]
+  },
+  {
+    "score": 1,
+    "comparative": 0.5,
+    "calculation": [
+      {
+        "easy": 1
+      }
+    ],
+    "tokens": [
+      "coca-cola",
+      "easy"
+    ],
+    "words": [
+      "easy"
+    ],
+    "positive": [
+      "easy"
+    ],
+    "negative": []
+  },
+  {
+    "score": 1,
+    "comparative": 0.08333333333333333,
+    "calculation": [
+      {
+        "yeah": 1
+      }
+    ],
+    "tokens": [
+      "hahahaha",
+      "yeah",
+      "what",
+      "else",
+      "itd",
+      "be",
+      "coca",
+      "cola",
+      "is",
+      "for",
+      "kids",
+      "🤪"
+    ],
+    "words": [
+      "yeah"
+    ],
+    "positive": [
+      "yeah"
+    ],
+    "negative": []
+  },
+  {
+    "score": 1,
+    "comparative": 0.030303030303030304,
+    "calculation": [
+      {
+        "wealth": 3
+      },
+      {
+        "savings": 1
+      },
+      {
+        "lost": -3
+      }
+    ],
+    "tokens": [
+      "new",
+      "funds",
+      "management",
+      "group",
+      "amp",
+      "has",
+      "lost",
+      "a",
+      "340",
+      "million",
+      "corporate",
+      "superannuation",
+      "mandate",
+      "with",
+      "coca-cola",
+      "amatil",
+      "representing",
+      "the",
+      "latest",
+      "high-profile",
+      "client",
+      "to",
+      "take",
+      "its",
+      "workers'",
+      "retirement",
+      "savings",
+      "out",
+      "of",
+      "the",
+      "scandal-plagued",
+      "wealth",
+      "company"
+    ],
+    "words": [
+      "wealth",
+      "savings",
+      "lost"
+    ],
+    "positive": [
+      "wealth",
+      "savings"
+    ],
+    "negative": [
+      "lost"
+    ]
+  },
+  {
+    "score": 1,
+    "comparative": 0.05,
+    "calculation": [
+      {
+        "yeah": 1
+      }
+    ],
+    "tokens": [
+      "i",
+      "was",
+      "about",
+      "to",
+      "say",
+      "the",
+      "space",
+      "merchants",
+      "yeah",
+      "coca",
+      "cola",
+      "has",
+      "a",
+      "senate",
+      "seat",
+      "iirc",
+      "things",
+      "of",
+      "that",
+      "nature"
+    ],
+    "words": [
+      "yeah"
+    ],
+    "positive": [
+      "yeah"
+    ],
+    "negative": []
+  },
+  {
+    "score": 1,
+    "comparative": 0.058823529411764705,
+    "calculation": [
+      {
+        "crap": -3
+      },
+      {
+        "benefit": 2
+      },
+      {
+        "likes": 2
+      }
+    ],
+    "tokens": [
+      "why",
+      "only",
+      "the",
+      "govt",
+      "and",
+      "the",
+      "likes",
+      "of",
+      "coca-cola",
+      "will",
+      "benefit",
+      "oh",
+      "and",
+      "you'll",
+      "get",
+      "crap",
+      "weed"
+    ],
+    "words": [
+      "crap",
+      "benefit",
+      "likes"
+    ],
+    "positive": [
+      "benefit",
+      "likes"
+    ],
+    "negative": [
+      "crap"
+    ]
+  },
+  {
+    "score": 1,
+    "comparative": 0.07692307692307693,
+    "calculation": [
+      {
+        "acceptable": 1
+      }
+    ],
+    "tokens": [
+      "cocaine",
+      "or",
+      "coca-cola",
+      "only",
+      "one",
+      "is",
+      "an",
+      "acceptable",
+      "substitute",
+      "you",
+      "know",
+      "which",
+      "one"
+    ],
+    "words": [
+      "acceptable"
+    ],
+    "positive": [
+      "acceptable"
+    ],
+    "negative": []
+  },
+  {
+    "score": 2,
+    "comparative": 0.2222222222222222,
+    "calculation": [
+      {
+        "like": 2
+      }
+    ],
+    "tokens": [
+      "coca-cola",
+      "zero",
+      "be",
+      "lowkey",
+      "tasting",
+      "like",
+      "blood",
+      "tonic",
+      "🤧"
+    ],
+    "words": [
+      "like"
+    ],
+    "positive": [
+      "like"
+    ],
+    "negative": []
+  },
+  {
+    "score": 2,
+    "comparative": 0.05263157894736842,
+    "calculation": [
+      {
+        "hoping": 2
+      }
+    ],
+    "tokens": [
+      "made",
+      "a",
+      "coca-cola",
+      "mask",
+      "for",
+      "my",
+      "mom",
+      "not",
+      "pictured",
+      "and",
+      "a",
+      "red",
+      "wings",
+      "one",
+      "for",
+      "me",
+      "my",
+      "grandma",
+      "has",
+      "requested",
+      "some",
+      "michigan",
+      "and",
+      "red",
+      "wings",
+      "masks",
+      "so",
+      "i’m",
+      "hoping",
+      "to",
+      "get",
+      "those",
+      "done",
+      "after",
+      "work",
+      "this",
+      "week",
+      "…"
+    ],
+    "words": [
+      "hoping"
+    ],
+    "positive": [
+      "hoping"
+    ],
+    "negative": []
+  },
+  {
+    "score": 2,
+    "comparative": 0.16666666666666666,
+    "calculation": [
+      {
+        "affordable": 2
+      }
+    ],
+    "tokens": [
+      "1997",
+      "coca",
+      "cola",
+      "delivery",
+      "truck",
+      "blown",
+      "glass",
+      "collection",
+      "ornament",
+      "affordable",
+      "6",
+      "80"
+    ],
+    "words": [
+      "affordable"
+    ],
+    "positive": [
+      "affordable"
+    ],
+    "negative": []
+  },
+  {
+    "score": 2,
+    "comparative": 0.07692307692307693,
+    "calculation": [
+      {
+        "no": -1
+      },
+      {
+        "bad": 3
+      }
+    ],
+    "tokens": [
+      "not",
+      "bad",
+      "marty",
+      "it's",
+      "no",
+      "rum",
+      "and",
+      "coca",
+      "cola",
+      "but",
+      "you",
+      "don't",
+      "have",
+      "multiple",
+      "personalities",
+      "so",
+      "you'll",
+      "never",
+      "get",
+      "away",
+      "with",
+      "doing",
+      "a",
+      "mean",
+      "andrews",
+      "sisters"
+    ],
+    "words": [
+      "no",
+      "bad"
+    ],
+    "positive": [
+      "bad"
+    ],
+    "negative": [
+      "no"
+    ]
+  },
+  {
+    "score": 2,
+    "comparative": 0.25,
+    "calculation": [
+      {
+        "favorite": 2
+      }
+    ],
+    "tokens": [
+      "ft",
+      "coca",
+      "cola",
+      "classic",
+      "our",
+      "favorite",
+      "drink",
+      "cocacola"
+    ],
+    "words": [
+      "favorite"
+    ],
+    "positive": [
+      "favorite"
+    ],
+    "negative": []
+  },
+  {
+    "score": 2,
+    "comparative": 0.2857142857142857,
+    "calculation": [
+      {
+        "like": 2
+      }
+    ],
+    "tokens": [
+      "to",
+      "me",
+      "they",
+      "taste",
+      "like",
+      "real",
+      "coca-cola"
+    ],
+    "words": [
+      "like"
+    ],
+    "positive": [
+      "like"
+    ],
+    "negative": []
+  },
+  {
+    "score": 2,
+    "comparative": 0.04081632653061224,
+    "calculation": [
+      {
+        "better": 2
+      },
+      {
+        "better": 2
+      },
+      {
+        "failed": -2
+      }
+    ],
+    "tokens": [
+      "1",
+      "branding",
+      "try",
+      "and",
+      "create",
+      "another",
+      "coca",
+      "cola",
+      "or",
+      "redbull",
+      "virgin",
+      "tried",
+      "and",
+      "failed",
+      "2",
+      "it’s",
+      "better",
+      "to",
+      "be",
+      "first",
+      "than",
+      "to",
+      "be",
+      "better",
+      "if",
+      "you’re",
+      "not",
+      "the",
+      "first",
+      "don’t",
+      "rush",
+      "instead",
+      "pivot",
+      "3",
+      "user",
+      "base",
+      "many",
+      "can",
+      "copy",
+      "twitter",
+      "in",
+      "2",
+      "weeks",
+      "what",
+      "you",
+      "can’t",
+      "copy",
+      "is",
+      "people"
+    ],
+    "words": [
+      "better",
+      "better",
+      "failed"
+    ],
+    "positive": [
+      "better",
+      "better"
+    ],
+    "negative": [
+      "failed"
+    ]
+  },
+  {
+    "score": 2,
+    "comparative": 0.125,
+    "calculation": [
+      {
+        "favourite": 2
+      }
+    ],
+    "tokens": [
+      "if",
+      "coca",
+      "cola",
+      "is",
+      "fr",
+      "your",
+      "favourite",
+      "drink",
+      "we're",
+      "getting",
+      "you",
+      "conversion",
+      "therapy",
+      "i",
+      "voted",
+      "pee"
+    ],
+    "words": [
+      "favourite"
+    ],
+    "positive": [
+      "favourite"
+    ],
+    "negative": []
+  },
+  {
+    "score": 2,
+    "comparative": 0.25,
+    "calculation": [
+      {
+        "like": 2
+      }
+    ],
+    "tokens": [
+      "pick",
+      "one",
+      "like",
+      "for",
+      "coca-cola",
+      "rt",
+      "for",
+      "pepsi"
+    ],
+    "words": [
+      "like"
+    ],
+    "positive": [
+      "like"
+    ],
+    "negative": []
+  },
+  {
+    "score": 2,
+    "comparative": 0.08695652173913043,
+    "calculation": [
+      {
+        "optimism": 2
+      },
+      {
+        "disappointed": -2
+      },
+      {
+        "cheers": 2
+      }
+    ],
+    "tokens": [
+      "coca-cola",
+      "cheers",
+      "to",
+      "the",
+      "human",
+      "race",
+      "|",
+      "is",
+      "one",
+      "brand",
+      "that",
+      "has",
+      "never",
+      "disappointed",
+      "me",
+      "spreading",
+      "optimism",
+      "in",
+      "the",
+      "times",
+      "of",
+      "need",
+      "ー19"
+    ],
+    "words": [
+      "optimism",
+      "disappointed",
+      "cheers"
+    ],
+    "positive": [
+      "optimism",
+      "cheers"
+    ],
+    "negative": [
+      "disappointed"
+    ]
+  },
+  {
+    "score": 2,
+    "comparative": 0.16666666666666666,
+    "calculation": [
+      {
+        "like": 2
+      }
+    ],
+    "tokens": [
+      "i",
+      "feel",
+      "like",
+      "having",
+      "another",
+      "refreshing",
+      "coca-cola",
+      "can",
+      "i",
+      "get",
+      "a",
+      "sponsor"
+    ],
+    "words": [
+      "like"
+    ],
+    "positive": [
+      "like"
+    ],
+    "negative": []
+  },
+  {
+    "score": 3,
+    "comparative": 0.25,
+    "calculation": [
+      {
+        "nice": 3
+      }
+    ],
+    "tokens": [
+      "she",
+      "is",
+      "going",
+      "to",
+      "be",
+      "a",
+      "nice",
+      "meal",
+      "i",
+      "have",
+      "the",
+      "coca-cola"
+    ],
+    "words": [
+      "nice"
+    ],
+    "positive": [
+      "nice"
+    ],
+    "negative": []
+  },
+  {
+    "score": 3,
+    "comparative": 0.42857142857142855,
+    "calculation": [
+      {
+        "love": 3
+      }
+    ],
+    "tokens": [
+      "for",
+      "the",
+      "love",
+      "of",
+      "coca",
+      "cola",
+      "❤️"
+    ],
+    "words": [
+      "love"
+    ],
+    "positive": [
+      "love"
+    ],
+    "negative": []
+  },
+  {
+    "score": 3,
+    "comparative": 0.08571428571428572,
+    "calculation": [
+      {
+        "nice": 3
+      },
+      {
+        "like": 2
+      },
+      {
+        "disappointing": -2
+      }
+    ],
+    "tokens": [
+      "ad",
+      "is",
+      "absolutely",
+      "disappointing",
+      "it’s",
+      "like",
+      "they",
+      "copy",
+      "the",
+      "coca-cola",
+      "commercials",
+      "with",
+      "a",
+      "really",
+      "nice",
+      "family",
+      "twist",
+      "to",
+      "it",
+      "but",
+      "that’s",
+      "not",
+      "what",
+      "sports",
+      "is",
+      "about",
+      "and",
+      "definitely",
+      "not",
+      "what",
+      "a",
+      "sports",
+      "drink",
+      "is",
+      "about"
+    ],
+    "words": [
+      "nice",
+      "like",
+      "disappointing"
+    ],
+    "positive": [
+      "nice",
+      "like"
+    ],
+    "negative": [
+      "disappointing"
+    ]
+  },
+  {
+    "score": 3,
+    "comparative": 0.25,
+    "calculation": [
+      {
+        "super": 3
+      }
+    ],
+    "tokens": [
+      "experiment",
+      "coca",
+      "cola",
+      "vs",
+      "mentos",
+      "and",
+      "baking",
+      "soda",
+      "|",
+      "super",
+      "reaction",
+      "via"
+    ],
+    "words": [
+      "super"
+    ],
+    "positive": [
+      "super"
+    ],
+    "negative": []
+  },
+  {
+    "score": 3,
+    "comparative": 0.21428571428571427,
+    "calculation": [
+      {
+        "😇": 3
+      }
+    ],
+    "tokens": [
+      "cuba",
+      "livre",
+      "had",
+      "continuous",
+      "processing",
+      "of",
+      "the",
+      "collins",
+      "but",
+      "now",
+      "on",
+      "diet",
+      "coca-cola",
+      "😇"
+    ],
+    "words": [
+      "😇"
+    ],
+    "positive": [
+      "😇"
+    ],
+    "negative": []
+  },
+  {
+    "score": 3,
+    "comparative": 0.6,
+    "calculation": [
+      {
+        "super": 3
+      }
+    ],
+    "tokens": [
+      "coca",
+      "cola",
+      "super",
+      "brand",
+      "indeed"
+    ],
+    "words": [
+      "super"
+    ],
+    "positive": [
+      "super"
+    ],
+    "negative": []
+  },
+  {
+    "score": 3,
+    "comparative": 0.25,
+    "calculation": [
+      {
+        "😂": 1
+      },
+      {
+        "hope": 2
+      }
+    ],
+    "tokens": [
+      "i",
+      "hope",
+      "you",
+      "know",
+      "i’m",
+      "referring",
+      "to",
+      "coca",
+      "cola",
+      "not",
+      "cocaine",
+      "😂"
+    ],
+    "words": [
+      "😂",
+      "hope"
+    ],
+    "positive": [
+      "😂",
+      "hope"
+    ],
+    "negative": []
+  },
+  {
+    "score": 3,
+    "comparative": 0.1111111111111111,
+    "calculation": [
+      {
+        "want": 1
+      },
+      {
+        "bother": 2
+      }
+    ],
+    "tokens": [
+      "you",
+      "do",
+      "realize",
+      "that",
+      "coca",
+      "cola",
+      "used",
+      "to",
+      "contain",
+      "some",
+      "small",
+      "amount",
+      "of",
+      "cocaine",
+      "right",
+      "or",
+      "do",
+      "you",
+      "just",
+      "not",
+      "bother",
+      "to",
+      "investigate",
+      "you",
+      "just",
+      "want",
+      "clicks"
+    ],
+    "words": [
+      "want",
+      "bother"
+    ],
+    "positive": [
+      "want",
+      "bother"
+    ],
+    "negative": []
+  },
+  {
+    "score": 4,
+    "comparative": 0.25,
+    "calculation": [
+      {
+        "💙": 3
+      },
+      {
+        "big": 1
+      }
+    ],
+    "tokens": [
+      "pizza",
+      "com",
+      "ketchup",
+      "+",
+      "coca",
+      "cola",
+      "+",
+      "assistir",
+      "the",
+      "big",
+      "bang",
+      "theory",
+      "tudo",
+      "pra",
+      "mim",
+      "💙"
+    ],
+    "words": [
+      "💙",
+      "big"
+    ],
+    "positive": [
+      "💙",
+      "big"
+    ],
+    "negative": []
+  },
+  {
+    "score": 4,
+    "comparative": 0.5714285714285714,
+    "calculation": [
+      {
+        "win": 4
+      }
+    ],
+    "tokens": [
+      "coca",
+      "cola",
+      "should",
+      "win",
+      "this",
+      "hands",
+      "down"
+    ],
+    "words": [
+      "win"
+    ],
+    "positive": [
+      "win"
+    ],
+    "negative": []
+  },
+  {
+    "score": 4,
+    "comparative": 0.1,
+    "calculation": [
+      {
+        "😝": 2
+      },
+      {
+        "ugh": -2
+      },
+      {
+        "backs": 1
+      },
+      {
+        "liked": 2
+      },
+      {
+        "care": 2
+      },
+      {
+        "admit": -1
+      }
+    ],
+    "tokens": [
+      "i",
+      "have",
+      "to",
+      "admit",
+      "i",
+      "didn’t",
+      "care",
+      "for",
+      "the",
+      "sweetness",
+      "of",
+      "the",
+      "coca",
+      "cola",
+      "boiled",
+      "ribs",
+      "but",
+      "my",
+      "family",
+      "liked",
+      "them",
+      "and",
+      "the",
+      "smoked",
+      "baby",
+      "backs",
+      "equal",
+      "they",
+      "couldn’t",
+      "decide",
+      "ugh",
+      "now",
+      "i’ll",
+      "have",
+      "to",
+      "do",
+      "both",
+      "every",
+      "time",
+      "😝"
+    ],
+    "words": [
+      "😝",
+      "ugh",
+      "backs",
+      "liked",
+      "care",
+      "admit"
+    ],
+    "positive": [
+      "😝",
+      "backs",
+      "liked",
+      "care"
+    ],
+    "negative": [
+      "ugh",
+      "admit"
+    ]
+  },
+  {
+    "score": 4,
+    "comparative": 0.26666666666666666,
+    "calculation": [
+      {
+        "like": 2
+      },
+      {
+        "enlighten": 2
+      }
+    ],
+    "tokens": [
+      "margaret",
+      "cho",
+      "ain't",
+      "gon'",
+      "be",
+      "able",
+      "to",
+      "enlighten",
+      "us",
+      "like",
+      "the",
+      "coca-cola",
+      "polar",
+      "bears",
+      "will"
+    ],
+    "words": [
+      "like",
+      "enlighten"
+    ],
+    "positive": [
+      "like",
+      "enlighten"
+    ],
+    "negative": []
+  },
+  {
+    "score": 4,
+    "comparative": 0.2857142857142857,
+    "calculation": [
+      {
+        "lmao": 4
+      }
+    ],
+    "tokens": [
+      "just",
+      "to",
+      "clarify",
+      "that",
+      "tweet",
+      "i",
+      "was",
+      "referring",
+      "to",
+      "coca",
+      "cola",
+      "not",
+      "cocaine",
+      "lmao"
+    ],
+    "words": [
+      "lmao"
+    ],
+    "positive": [
+      "lmao"
+    ],
+    "negative": []
+  },
+  {
+    "score": 5,
+    "comparative": 0.4166666666666667,
+    "calculation": [
+      {
+        "comfort": 2
+      },
+      {
+        "perfect": 3
+      }
+    ],
+    "tokens": [
+      "a",
+      "quesadilla",
+      "minestrone",
+      "soup",
+      "and",
+      "a",
+      "coca-cola",
+      "perfect",
+      "sunday",
+      "night",
+      "comfort",
+      "food"
+    ],
+    "words": [
+      "comfort",
+      "perfect"
+    ],
+    "positive": [
+      "comfort",
+      "perfect"
+    ],
+    "negative": []
+  },
+  {
+    "score": 5,
+    "comparative": 0.45454545454545453,
+    "calculation": [
+      {
+        "love": 3
+      },
+      {
+        "no": -1
+      },
+      {
+        "sparkling": 3
+      }
+    ],
+    "tokens": [
+      "aha",
+      "sparkling",
+      "water",
+      "is",
+      "coca",
+      "cola",
+      "no",
+      "wonder",
+      "i",
+      "love",
+      "it"
+    ],
+    "words": [
+      "love",
+      "no",
+      "sparkling"
+    ],
+    "positive": [
+      "love",
+      "sparkling"
+    ],
+    "negative": [
+      "no"
+    ]
+  },
+  {
+    "score": 5,
+    "comparative": 0.2777777777777778,
+    "calculation": [
+      {
+        "exciting": 3
+      },
+      {
+        "rewarding": 2
+      }
+    ],
+    "tokens": [
+      "there’s",
+      "rewarding",
+      "refreshment",
+      "in",
+      "every",
+      "coca-cola",
+      "beverage",
+      "come",
+      "see",
+      "all",
+      "the",
+      "ways",
+      "you",
+      "can",
+      "earn",
+      "exciting",
+      "perks",
+      "today"
+    ],
+    "words": [
+      "exciting",
+      "rewarding"
+    ],
+    "positive": [
+      "exciting",
+      "rewarding"
+    ],
+    "negative": []
+  },
+  {
+    "score": 6,
+    "comparative": 0.375,
+    "calculation": [
+      {
+        "helps": 2
+      },
+      {
+        "yes": 1
+      },
+      {
+        "lol": 3
+      }
+    ],
+    "tokens": [
+      "lol",
+      "yes",
+      "definitely",
+      "vinyl",
+      "and",
+      "i’m",
+      "also",
+      "partial",
+      "to",
+      "the",
+      "coca",
+      "cola",
+      "artwork",
+      "so",
+      "that",
+      "helps"
+    ],
+    "words": [
+      "helps",
+      "yes",
+      "lol"
+    ],
+    "positive": [
+      "helps",
+      "yes",
+      "lol"
+    ],
+    "negative": []
+  },
+  {
+    "score": 6,
+    "comparative": 0.15,
+    "calculation": [
+      {
+        "appreciate": 2
+      },
+      {
+        "like": 2
+      },
+      {
+        "like": 2
+      }
+    ],
+    "tokens": [
+      "i",
+      "think",
+      "you",
+      "are",
+      "not",
+      "thinking",
+      "like",
+      "an",
+      "entrepreneur",
+      "do",
+      "research",
+      "on",
+      "even",
+      "these",
+      "foreign",
+      "companies",
+      "like",
+      "coca",
+      "cola",
+      "voltic",
+      "and",
+      "ggl",
+      "and",
+      "u",
+      "will",
+      "appreciate",
+      "what",
+      "zoomlion",
+      "is",
+      "paying",
+      "to",
+      "workers",
+      "don’t",
+      "just",
+      "talk",
+      "because",
+      "u",
+      "have",
+      "to",
+      "talk"
+    ],
+    "words": [
+      "appreciate",
+      "like",
+      "like"
+    ],
+    "positive": [
+      "appreciate",
+      "like",
+      "like"
+    ],
+    "negative": []
+  },
+  {
+    "score": 7,
+    "comparative": 0.6363636363636364,
+    "calculation": [
+      {
+        "love": 3
+      },
+      {
+        "amazing": 4
+      }
+    ],
+    "tokens": [
+      "coca",
+      "cola",
+      "cakes",
+      "are",
+      "amazing",
+      "my",
+      "granny",
+      "used",
+      "to",
+      "love",
+      "those"
+    ],
+    "words": [
+      "love",
+      "amazing"
+    ],
+    "positive": [
+      "love",
+      "amazing"
+    ],
+    "negative": []
+  },
+  {
+    "score": 9,
+    "comparative": 0.25,
+    "calculation": [
+      {
+        "good": 3
+      },
+      {
+        "delicious": 3
+      },
+      {
+        "love": 3
+      }
+    ],
+    "tokens": [
+      "🤣🤣",
+      "i",
+      "love",
+      "blue",
+      "cheese",
+      "and",
+      "water",
+      "biscuits",
+      "paired",
+      "with",
+      "a",
+      "delicious",
+      "coca",
+      "cola",
+      "tbh",
+      "the",
+      "flavours",
+      "just",
+      "work",
+      "sounds",
+      "good",
+      "though",
+      "a",
+      "clumsy",
+      "child",
+      "again",
+      "knocked",
+      "over",
+      "my",
+      "2nd",
+      "glass",
+      "of",
+      "sauv",
+      "blanc",
+      "this",
+      "eve"
+    ],
+    "words": [
+      "good",
+      "delicious",
+      "love"
+    ],
+    "positive": [
+      "good",
+      "delicious",
+      "love"
+    ],
+    "negative": []
+  },
+  {
+    "score": 12,
+    "comparative": 0.2727272727272727,
+    "calculation": [
+      {
+        "advantage": 2
+      },
+      {
+        "focused": 2
+      },
+      {
+        "successful": 3
+      },
+      {
+        "feeling": 1
+      },
+      {
+        "happiness": 3
+      },
+      {
+        "united": 1
+      }
+    ],
+    "tokens": [
+      "coca-cola",
+      "gt",
+      "united",
+      "all",
+      "coke",
+      "trademark",
+      "brands",
+      "gt",
+      "open",
+      "happiness",
+      "amp",
+      "taste",
+      "the",
+      "feeling",
+      "the",
+      "most",
+      "successful",
+      "campaign",
+      "for",
+      "the",
+      "brand",
+      "gt",
+      "focused",
+      "on",
+      "a",
+      "movement",
+      "towards",
+      "a",
+      "healthier",
+      "brand",
+      "image",
+      "ic",
+      "gt",
+      "television",
+      "gt",
+      "print",
+      "gt",
+      "social",
+      "media",
+      "advantage",
+      "gt",
+      "cultural",
+      "diverse",
+      "markets"
+    ],
+    "words": [
+      "advantage",
+      "focused",
+      "successful",
+      "feeling",
+      "happiness",
+      "united"
+    ],
+    "positive": [
+      "advantage",
+      "focused",
+      "successful",
+      "feeling",
+      "happiness",
+      "united"
+    ],
+    "negative": []
+  }
+]
