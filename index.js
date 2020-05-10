@@ -5,6 +5,7 @@ const { filter, zip } = require('rxjs')
 const { map } = require('rxjs/operators')
 const fs = require('fs')
 
+//https://www.npmjs.com/package/sentiment
 const Sentiment = require('sentiment');
 const sentiment = new Sentiment();
 
