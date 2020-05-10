@@ -27,7 +27,10 @@ const params = {
 
 fetchTweetsWhile({ tweets: [], max_id: null }, x => x.length < 100, fetchFilteredTweets, params)
   .then(tweets => polishTweets(tweets))
-  .then(polishedTweets => getTweetSentiment(polishedTweets))
+  .then(polishedTweets => {
+    writeFile(polishedTweets, 'polishedTweets')
+    return getTweetSentiment(polishedTweets)
+  })
   .then(sentimentTweets => {
     writeFile(sentimentTweets, 'sentimentTweets')
     printSentiment(sentimentTweets)
@@ -104,26 +107,26 @@ function printSentiment(tweets) {
   console.log(`Amount of neutral tweets: ${tweets.filter(t => t.score == 0).length}`)
 
   console.log(`\nTop 3 most positive tweets:`)
-  tweets.sort(sortTweets("score", "desc")).slice(0, 3).forEach(x => console.log(x.tokens.join(' ')))
+  tweets.sort(sortTweets("score", "desc")).slice(0, 3).forEach(x => console.log(`- ${x.tokens.join(' ')}\n`))
   console.log(`\nTop 3 most negative tweets:`)
-  tweets.sort(sortTweets("score", "asc")).slice(0, 3).forEach(x => console.log(x.tokens.join(' ')))
+  tweets.sort(sortTweets("score", "asc")).slice(0, 3).forEach(x => console.log(`- ${x.tokens.join(' ')}\n`))
 }
 
-function sortTweets(score,order) {
+function sortTweets(score, order) {
   let sort_order = 1;
-  if(order === "desc") sort_order = -1;
+  if (order === "desc") sort_order = -1;
 
-  return function (a, b){
-      // a should come before b in the sorted order
-      if(a[score] < b[score]){
-              return -1 * sort_order;
+  return function (a, b) {
+    // a should come before b in the sorted order
+    if (a[score] < b[score]) {
+      return -1 * sort_order;
       // a should come after b in the sorted order
-      }else if(a[score] > b[score]){
-              return 1 * sort_order;
+    } else if (a[score] > b[score]) {
+      return 1 * sort_order;
       // a and b are the same
-      }else{
-              return 0 * sort_order;
-      }
+    } else {
+      return 0 * sort_order;
+    }
   }
 }
 
